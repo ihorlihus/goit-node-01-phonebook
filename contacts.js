@@ -34,7 +34,7 @@ async function removeContact(contactId) {
     return null;
   }
   const contactsWithoutDel = allContacts.filter(
-    (item) => item.id !== contactId
+    (item) => item.id !== contactId.toString()
   );
   await fs.writeFile(
     contactsPath,
